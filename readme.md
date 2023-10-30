@@ -29,3 +29,6 @@ chmod +x <Vitis installer>
 sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
 ```
 
+<a href="https://www.xilinx.com/getlicense">Generate License</a>
+Open "Manage license" and 
+
