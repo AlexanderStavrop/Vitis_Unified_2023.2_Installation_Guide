@@ -42,7 +42,7 @@ cp ~/Downloads/Xilinx.lic <Vitis installation folder>
 
 ## Setting up the environment
 ```
-source <Vitis Installation path>/Vitis/<Vitis Version>/settings.sh
+source <Vitis Installation path>/Vitis/<Vitis Version>/settings64.sh
 ```
 - Test by running
 ```
