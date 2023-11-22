@@ -45,9 +45,11 @@ cp ~/Downloads/Xilinx.lic <Vitis installation folder>
 ```
 kate ~/.bashrc
 ```
-- Add this line
+- Add these lines
 ```
-source <Vitis Installation path>/Vitis/<Vitis Version>/settings64.sh
+# Xilinx source command
+source ~/Documents/Xilinx/Vitis/2023.2/settings64.sh
+export PLATFORM_REPO_PATHS="/home/alex/Documents/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/"
 ```
 - Test by running
 ```
