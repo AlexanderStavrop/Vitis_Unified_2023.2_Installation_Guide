@@ -41,6 +41,11 @@ cp ~/Downloads/Xilinx.lic <Vitis installation folder>
 - Open "Manage license" and link the license
 
 ## Setting up the environment
+- Open bashrc for edit
+```
+kate ~/.bashrc
+```
+- Add this line
 ```
 source <Vitis Installation path>/Vitis/<Vitis Version>/settings64.sh
 ```
