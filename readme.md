@@ -8,9 +8,10 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install libncurses5-dev libncursesw5-dev libncurses5 libtinfo5 libtinfo-dev
 ```
 
-# Downloading the installer
 
+# Downloading the installer
 - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Download</a>
+
 
 # Run the installer
 - Make the installer executable
@@ -57,4 +58,19 @@ which vitis
 ```
 ```
 which aiecompiler
+```
+
+## XRT
+- Downlaod the latest version from git hub
+```
+git clone https://github.com/Xilinx/XRT.git
+```
+- Instal dependences
+```
+sudo ~/Documents/GitHub/XRT/src/runtime_src/tools/scripts/xrtdeps.sh
+```
+- Build the XRT
+```
+cd <XRT>/build
+./build.sh
 ```
