@@ -95,4 +95,11 @@ sudo vim ~/.bashrc
 ```
 export pybind11_DIR=/usr/local/lib/python3.10/dist-packages/pybind11/share/cmake/pybind11
 ```
+- If *openssl error occurs* comment the **find_package(OpenSSL REQUIRED)** in following CMakeLists.txt
+```
+vim <XRT>/src/runtime_src/tools/xclbinutil/CMakeLists.txt
+```
+
+
+
 
