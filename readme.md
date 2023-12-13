@@ -71,18 +71,28 @@ sudo <XRT>/src/runtime_src/tools/scripts/xrtdeps.sh
 cd <XRT>/build
 ./build.sh
 ```
-- *If CMAKE error occurs* change the version and build again
+- If *CMAKE error occurs* change the version and build again
 ```
 cd <XRT>/src/runtime_src
 vim CMakeLists.list
 ```
-- *If CMAKE_VERSION error occurs* remove the **first** from the following file
+- If *CMAKE_VERSION error occurs* remove the **first** from the following file
 ```
 vim <XRT>/src/runtime_src/Cmakelist.txt
 ```
-- *If PYTHON_LIBRARIES and PYTHON_INCLUDE_DIRS error occurs* add the following above the **-dpg** if statement
+- If *PYTHON_LIBRARIES and PYTHON_INCLUDE_DIRS error occurs* add the cmake_flags line above the **-dpg** if statement
 ```
 vim <XRT>/build/build.sh
+```
+```
 cmake_flags+=" -DPYTHON_LIBRARY=/path/to/python/library/libpython3.x.so" # Change x to python version
 cmake_flags+=" -DPYTHON_INCLUDE_DIR=/path/to/python/include"
 ```
+- If *pybind11 error occurs* add the *export* line to bashrc
+```
+sudo vim ~/.bashrc
+```
+```
+export pybind11_DIR=/usr/local/lib/python3.10/dist-packages/pybind11/share/cmake/pybind11
+```
+
