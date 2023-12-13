@@ -1,5 +1,5 @@
 # Before installation
-- Update your system
+## Update your system
 ```
 sudo apt update -y && sudo apt upgrade -y
 ```
@@ -8,38 +8,35 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install libncurses5-dev libncursesw5-dev libncurses5 libtinfo5 libtinfo-dev
 ```
 
-
+<br></br>
 # Downloading the installer
 - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Download</a>
 
-
+<br></br>
 # Run the installer
-- Make the installer executable
+## Make the installer executable and run it
 ```
 cd ~/Downloads
-```
-```
 chmod +x <Vitis installer>
-```
-- Run the installation
-```
 ./<Vitis installer>
 ```
 
+<br></br>
 # After the installation is completed
-## Extra libraries
-- Install the extra needed libraries
+## Install the extra needed libraries
 ```
 sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
 ```
-
+<br></br>
 ## License
+### Generate and download the licence
 - <a href="https://www.xilinx.com/getlicense">Generate License</a>
-- Download the licence and save it in the Xilinx folder
+- Move the lic file into Vitis folder
 ```
 cp ~/Downloads/Xilinx.lic <Vitis installation folder>
 ```
 - Open "Manage license" and link the license
+<br></br>
 
 ## Setting up the environment
 - Open bashrc for edit
@@ -61,16 +58,22 @@ which aiecompiler
 ```
 
 ## XRT
-- Downlaod the latest version from git hub
+### Downlaod the latest version from git hub
 ```
 git clone https://github.com/Xilinx/XRT.git
 ```
-- Instal dependences
+### Instal dependences
 ```
-sudo ~/Documents/GitHub/XRT/src/runtime_src/tools/scripts/xrtdeps.sh
+sudo <XRT>/src/runtime_src/tools/scripts/xrtdeps.sh
 ```
-- Build the XRT
+### Build the XRT
 ```
 cd <XRT>/build
 ./build.sh
 ```
+- ***If CMAKE error occurs*** change the version and build again
+```
+cd <XRT>/src/runtime_src
+vim CMakeLists.list
+```
+ 
