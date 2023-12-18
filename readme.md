@@ -7,27 +7,32 @@ sudo apt update -y && sudo apt upgrade -y
 ```
 sudo apt install libncurses5-dev libncursesw5-dev libncurses5 libtinfo5 libtinfo-dev
 ```
-
 <br></br>
+
 # Downloading the installer
 - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Download</a>
-
 <br></br>
+
 # Run the installer
 ## Make the installer executable and run it
+- Make the file executable
 ```
 cd ~/Downloads
 chmod +x <Vitis installer>
+```
+- Run the installer
+```
 ./<Vitis installer>
 ```
-
 <br></br>
+
 # After the installation is completed
 ## Install the extra needed libraries
 ```
 sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
 ```
 <br></br>
+
 ## License
 ### Generate and download the licence
 - <a href="https://www.xilinx.com/getlicense">Generate License</a>
@@ -36,7 +41,6 @@ sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
 cp ~/Downloads/Xilinx.lic <Vitis installation folder>
 ```
 - Open "Manage license" and link the license
-<br></br>
 
 ## Setting up the environment
 - Open bashrc for edit
@@ -100,6 +104,15 @@ export pybind11_DIR=/usr/local/lib/python3.10/dist-packages/pybind11/share/cmake
 vim <XRT>/src/runtime_src/tools/xclbinutil/CMakeLists.txt
 ```
 
+## Sysroot
+### Download the Versal common image
+- <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Versal common image</a>
 
+### Extract the rootfs image
+```
+./sdk.sh -y -d <path_for_installation> -p
+```
 
-
+### Add it to Vitis
+- Navigate to *File -> Preferencies -> Opne Settings(UI)*
+- Search for **sysroot**
