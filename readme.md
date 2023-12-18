@@ -31,7 +31,6 @@ chmod +x <Vitis installer>
 ```
 sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
 ```
-<br></br>
 
 ## License
 ### Generate and download the licence
