@@ -61,48 +61,37 @@ which aiecompiler
 ```
 
 ## XRT
+### Check the cmake version
+```
+cmake --version
+```
+- If the version has a single digit, move the cmake version from vitis to desktop
+```
+mv <Vitis>/<Version>/tps/lnx64/cmake-3.3.2 ~/Desktop/
+```
+- Exit the terminal, reopen it and check the version again
+```
+cmake --version
+```
+
 ### Downlaod the latest version from git hub
 ```
 git clone https://github.com/Xilinx/XRT.git
 ```
 ### Instal dependences
 ```
-sudo <XRT>/src/runtime_src/tools/scripts/xrtdeps.sh
+cd XRT
+sudo src/runtime_src/tools/scripts/xrtdeps.sh
 ```
 ### Build the XRT
 ```
-cd <XRT>/build
+cd build
 ./build.sh
 ```
-- If *CMAKE error occurs* change the version and build again
+- Move the cmake back to Vitis directory
 ```
-cd <XRT>/src/runtime_src
-vim CMakeLists.list
+mv ~/Desktop/cmake-3.3.2 <Vitis>/<Version>/tps/lnx64/
 ```
-- If *CMAKE_VERSION error occurs* remove the **first** from the following file
-```
-vim <XRT>/src/runtime_src/Cmakelist.txt
-```
-- If *PYTHON_LIBRARIES and PYTHON_INCLUDE_DIRS error occurs* add the cmake_flags line above the **-dpg** if statement
-```
-vim <XRT>/build/build.sh
-```
-```
-cmake_flags+=" -DPYTHON_LIBRARY=/path/to/python/library/libpython3.x.so" # Change x to python version
-cmake_flags+=" -DPYTHON_INCLUDE_DIR=/path/to/python/include"
-```
-- If *pybind11 error occurs* add the *export* line to bashrc
-```
-sudo vim ~/.bashrc
-```
-```
-export pybind11_DIR=/usr/local/lib/python3.10/dist-packages/pybind11/share/cmake/pybind11
-```
-- If *openssl error occurs* comment the **find_package(OpenSSL REQUIRED)** in following CMakeLists.txt
-```
-vim <XRT>/src/runtime_src/tools/xclbinutil/CMakeLists.txt
-```
-
 ## Sysroot
 ### Download the Versal common image
 - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Versal common image</a>
