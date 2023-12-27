@@ -88,6 +88,11 @@ sudo src/runtime_src/tools/scripts/xrtdeps.sh
 cd build
 ./build.sh
 ```
+### Build the Rersources
+```
+cd Release
+make package
+```
 - Move the cmake back to Vitis directory
 ```
 mv ~/Desktop/cmake-3.3.2 <Vitis>/<Version>/tps/lnx64/
