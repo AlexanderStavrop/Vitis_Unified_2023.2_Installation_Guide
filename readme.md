@@ -30,7 +30,7 @@ chmod +x <Vitis installer>
 # After the installation
 ## Install the extra needed libraries
 ```
-sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
+sudo ./<Xilinx>/Vitis/<Version>/scripts/installLibs.sh
 ```
 
 ## License
@@ -38,7 +38,7 @@ sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
 - <a href="https://www.xilinx.com/getlicense">Generate License</a>
 - Move the lic file into Vitis folder
 ```
-cp ~/Downloads/Xilinx.lic <Vitis installation folder>
+cp ~/Downloads/Xilinx.lic <Xilinx>/
 ```
 - Open "Manage license" and link the license
 
@@ -50,8 +50,8 @@ kate ~/.bashrc
 - Add these lines
 ```
 # Xilinx source command
-source ~/Documents/Xilinx/Vitis/2023.2/settings64.sh
-export PLATFORM_REPO_PATHS="/home/alex/Documents/Xilinx/Vitis/2023.2/base_platforms/"
+source <Xilinx>/Vitis/<Version>/settings64.sh
+export PLATFORM_REPO_PATHS="<Xilinx>/Vitis/<Version>/base_platforms/"
 ```
 - Test by running
 ```
@@ -68,7 +68,7 @@ cmake --version
 ```
 - If the version has a single digit, move the cmake version from vitis to desktop
 ```
-mv <Vitis>/<Version>/tps/lnx64/cmake-x.x.x ~/Desktop/
+mv <Xilinx>/Vitis/<Version>/tps/lnx64/cmake-x.x.x ~/Desktop/
 ```
 - Exit the terminal, reopen it and check the version again
 ```
@@ -93,10 +93,19 @@ cd build
 cd Release
 make package
 ```
+- Move the xrt folder inside the opt directory
+```
+cd opt/
+sudo cp -r xilinx/ /opt/
+```
 - Move the cmake back to Vitis directory
 ```
-mv ~/Desktop/cmake-x.x.x <Vitis>/<Version>/tps/lnx64/
+mv ~/Desktop/cmake-x.x.x <Xilinx>/Vitis/<Version>/tps/lnx64/
 ```
+### Include the xrt library
+- Open Vitis and navigate to your ***Application*** component
+- In ***Settings*** open the ***userConfig.cmake***
+- In ***Directories*** browse and add the ***xrt*** directory
 
 ## Sysroot
 ### Download the Versal common image
@@ -104,10 +113,12 @@ mv ~/Desktop/cmake-x.x.x <Vitis>/<Version>/tps/lnx64/
 
 ### Extract the rootfs image
 ```
-./sdk.sh -y -d <path_to_xilinx_folder> -p
+cd xilinx-versal-common-v<version>
+./sdk.sh -y -d ~/Downloads/xilinx-versal-common-v2023.2/ -p
+sudo cp -r sysroots/ <Xilinx>/
 ```
 
 ### Add it to Vitis
-- Navigate to *File -> Preferencies -> Opne Settings(UI)*
+- Navigate to *File -> Preferencies -> Open Settings(UI)*
 - Search for **sysroot**
-- Lind the **Cortexa72** directory
+- Lind the **Cortexa72-cortexa53-xilinx-linux** directory
