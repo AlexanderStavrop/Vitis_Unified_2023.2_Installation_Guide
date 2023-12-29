@@ -9,12 +9,13 @@ sudo apt install libncurses5-dev libncursesw5-dev libncurses5 libtinfo5 libtinfo
 ```
 <br></br>
 
-# Downloading the installer
+# Instalation
+## Downloading the installer
 - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Download</a>
 <br></br>
 
-# Run the installer
-## Make the installer executable and run it
+## Run the installer
+### Make the installer executable and run it
 - Make the file executable
 ```
 cd ~/Downloads
