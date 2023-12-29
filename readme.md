@@ -27,7 +27,7 @@ chmod +x <Vitis installer>
 ```
 <br></br>
 
-# After the installation is completed
+# After the installation
 ## Install the extra needed libraries
 ```
 sudo ./<Vitis installation dir>Vitis/<Version>/scripts/installLibs.sh
