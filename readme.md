@@ -67,13 +67,12 @@ cmake --version
 ```
 - If the version has a single digit, move the cmake version from vitis to desktop
 ```
-mv <Vitis>/<Version>/tps/lnx64/cmake-3.3.2 ~/Desktop/
+mv <Vitis>/<Version>/tps/lnx64/cmake-x.x.x ~/Desktop/
 ```
 - Exit the terminal, reopen it and check the version again
 ```
 cmake --version
 ```
-
 ### Downlaod the latest version from git hub
 ```
 git clone https://github.com/Xilinx/XRT.git
@@ -95,17 +94,19 @@ make package
 ```
 - Move the cmake back to Vitis directory
 ```
-mv ~/Desktop/cmake-3.3.2 <Vitis>/<Version>/tps/lnx64/
+mv ~/Desktop/cmake-x.x.x <Vitis>/<Version>/tps/lnx64/
 ```
+
 ## Sysroot
 ### Download the Versal common image
 - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Versal common image</a>
 
 ### Extract the rootfs image
 ```
-./sdk.sh -y -d <path_for_installation> -p
+./sdk.sh -y -d <path_to_xilinx_folder> -p
 ```
 
 ### Add it to Vitis
 - Navigate to *File -> Preferencies -> Opne Settings(UI)*
 - Search for **sysroot**
+- Lind the **Cortexa72** directory
