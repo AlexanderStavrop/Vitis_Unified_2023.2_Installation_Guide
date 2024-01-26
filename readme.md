@@ -128,7 +128,7 @@ mv ~/Desktop/cmake-x.x.x <Xilinx>/Vitis/<Version>/tps/lnx64/
 cd ~/Download
 tar -xzvf xilinx-versal-common-v<version>
 ```
-### Build the sysroot files
+### Extracting the SDK
 ```
 cd xilinx-versal-common-v<version>
 ./sdk.sh -y -d ~/Downloads/xilinx-versal-common-v2023.2/ -p
