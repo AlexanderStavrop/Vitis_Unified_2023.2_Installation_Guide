@@ -125,6 +125,11 @@ mv ~/Desktop/cmake-x.x.x <Xilinx>/Vitis/<Version>/tps/lnx64/
 
 ### Extract the rootfs image
 ```
+cd ~/Download
+tar -xzvf xilinx-versal-common-v<version>
+```
+### Build the sysroot files
+```
 cd xilinx-versal-common-v<version>
 ./sdk.sh -y -d ~/Downloads/xilinx-versal-common-v2023.2/ -p
 sudo cp -r sysroots/ <Xilinx>/
