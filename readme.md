@@ -88,6 +88,18 @@ sudo src/runtime_src/tools/scripts/xrtdeps.sh
 cd build
 ./build.sh
 ```
+- If the libtinfo.so.11 library cannot be found
+```
+sudo apt update
+cd ~/Downloads
+wget http://mirrors.kernel.org/ubuntu/pool/main/libi/libidn/libidn11_1.33-2.2ubuntu2_amd64.deb
+sudo apt install ./libidn11_1.33-2.2ubuntu2_amd64.deb
+```
+- Try building it again
+```
+cd <XRT>/build
+./build.sh
+```
 ### Build the Rersources
 ```
 cd Release
