@@ -134,15 +134,13 @@ cd xilinx-versal-common-v<version>
 ./sdk.sh -y -d ~/Downloads/xilinx-versal-common-v2023.2/ -p
 sudo cp -r sysroots/ <Xilinx>/
 ```
-
-## Building a project
-- If *asm library cannot be found*
-```
-sudo ln -s /usr/include/asm-generic/ /usr/include/asm
-```
-
-
 ### Add it to Vitis
 - Navigate to *File -> Preferencies -> Open Settings(UI)*
 - Search for **sysroot**
 - Lind the **Cortexa72-cortexa53-xilinx-linux** directory
+
+# Building a project
+- If *asm library cannot be found*
+```
+sudo ln -s /usr/include/asm-generic/ /usr/include/asm
+```
