@@ -135,6 +135,13 @@ cd xilinx-versal-common-v<version>
 sudo cp -r sysroots/ <Xilinx>/
 ```
 
+## Building a project
+- If *asm library cannot be found*
+```
+sudo ln -s /usr/include/asm-generic/ /usr/include/asm
+```
+
+
 ### Add it to Vitis
 - Navigate to *File -> Preferencies -> Open Settings(UI)*
 - Search for **sysroot**
