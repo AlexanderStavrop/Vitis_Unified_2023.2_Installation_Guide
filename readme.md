@@ -140,7 +140,11 @@ sudo cp -r sysroots/ <Xilinx>/
 - Lind the **Cortexa72-cortexa53-xilinx-linux** directory
 
 # Building a project
-- If *asm library cannot be found*
+- If *asm library* cannot be found
 ```
 sudo ln -s /usr/include/asm-generic/ /usr/include/asm
+```
+- If *wordsize library* cannot be found
+```
+sudo apt install gcc-multilib
 ```
