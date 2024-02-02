@@ -121,7 +121,6 @@ vim ~/.bashrc
 ```
 - Add these lines
 ```
-# Xilinx source command
 export XILINX_XRT="/opt/xilinx/xrt/"
 ```
 ### Include the xrt library in Vitis
