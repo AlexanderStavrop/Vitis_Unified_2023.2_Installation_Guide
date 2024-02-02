@@ -42,10 +42,10 @@ cp ~/Downloads/Xilinx.lic <Xilinx>/
 ```
 - Open "Manage license" and link the license
 
-## Setting up the environment
+## Setting up the enviromental variables
 - Open bashrc for edit
 ```
-kate ~/.bashrc
+vim ~/.bashrc
 ```
 - Add these lines
 ```
@@ -114,7 +114,17 @@ sudo cp -r xilinx/ /opt/
 ```
 mv ~/Desktop/cmake-x.x.x <Xilinx>/Vitis/<Version>/tps/lnx64/
 ```
-### Include the xrt library
+### Set the enviromental variable
+- Open bashrc for edit
+```
+vim ~/.bashrc
+```
+- Add these lines
+```
+# Xilinx source command
+export XILINX_XRT="/opt/xilinx/xrt/"
+```
+### Include the xrt library in Vitis
 - Open Vitis and navigate to your ***Application*** component
 - In ***Settings*** open the ***userConfig.cmake***
 - In ***Directories*** browse and add the ***xrt*** directory
@@ -138,6 +148,8 @@ sudo cp -r sysroots/ <Xilinx>/
 - Navigate to *File -> Preferencies -> Open Settings(UI)*
 - Search for **sysroot**
 - Lind the **Cortexa72-cortexa53-xilinx-linux** directory
+<br></br>
+
 
 # Building a project
 - If *asm library* cannot be found
