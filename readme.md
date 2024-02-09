@@ -13,7 +13,7 @@
 
 # Instalation
   ## Downloading the installer
-  - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Download</a>
+  - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Installer</a>
   <br></br>
   
   ## Run the installer
@@ -152,7 +152,7 @@
   
   ## Petalinux
   ### Download the latest petalinux
-  - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Versal common image</a>
+  - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Petalinux</a>
   
   <br></br>
 
