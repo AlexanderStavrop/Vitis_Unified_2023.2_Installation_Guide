@@ -153,7 +153,15 @@
   ## Petalinux
   ### Download the latest petalinux
   - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Petalinux</a>
-  
+  ### Install needed packages
+  ```
+  sudo apt install gawk net-tools autoconf texinfo -y
+  ```
+  ### Run the installer
+  ```
+  ./<petalinux>.run -d <Xilinx>/petalinux/
+  ```
+
   <br></br>
 
 # Building a project
