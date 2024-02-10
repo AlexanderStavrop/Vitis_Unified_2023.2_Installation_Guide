@@ -5,7 +5,7 @@
   ```
   - Install needed libraries so the installation completes successfully
   ```
-  sudo apt install libncurses5-dev libncursesw5-dev libncurses5 libtinfo5 libtinfo-dev
+  sudo apt install libncurses5-dev libncursesw5-dev libncurses5 libtinfo5 libtinfo-dev -y
   ```
   <br></br>
 
