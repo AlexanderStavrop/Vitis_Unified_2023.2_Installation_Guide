@@ -42,8 +42,11 @@
   ```
   cp ~/Downloads/Xilinx.lic <Xilinx>/
   ```
-  - Open "Manage license" and link the license
-  
+  - Set the bashrc variable
+  ```
+  # Xilinx source command
+  export XILINXD_LICENSE_FILE="<Xilinx>/Xilinx.lic"
+  ```
   ## Setting up the enviromental variables
   - Open bashrc for edit
   ```
