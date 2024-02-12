@@ -130,7 +130,7 @@
   - In ***Settings*** open the ***userConfig.cmake***
   - In ***Directories*** browse and add the ***xrt*** directory
 
-  ## Sysroot
+  ## Kernel Image - Rootfs - Sysroot
   ### Download the Versal common image
   - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Versal common image</a>
   
@@ -145,7 +145,9 @@
   ./sdk.sh -y -d ~/Downloads/xilinx-versal-common-v2023.2/ -p
   sudo cp -r sysroots/ <Xilinx>/
   ```
-  ### Add it to Vitis
+  ### Index the corresponding file to Vitis
+  #### Kernel Image
+  
   - Navigate to *File -> Preferencies -> Open Settings(UI)*
   - Search for **sysroot**
   - Lind the **Cortexa72-cortexa53-xilinx-linux** directory
