@@ -30,6 +30,10 @@
   <br></br>
 
 # After the installation
+  ## Delete the payload (~60 GB) (Experimental)
+  ```
+  rm -rf <Xilinx>/Downloads/<Version>/payload
+  ```
   ## Install the extra needed libraries
   ```
   sudo ./<Xilinx>/Vitis/<Version>/scripts/installLibs.sh
