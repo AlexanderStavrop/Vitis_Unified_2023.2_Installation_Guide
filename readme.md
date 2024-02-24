@@ -37,13 +37,14 @@
         ```
       - Navigate to **Help -> Add design tools or devices**
       - Install the desired device(s)
+      - Delete the payload (~60 GB) (If it is not deleted by it self)
+      ```
+      rm -rf /opt/xilinx/Installation_2023.2/Downloads/2023.2/payload
+      ```
   <br></br>
 
+
 # After the installation
-  ## Delete the payload (~60 GB) (If it is not deleted by it self)
-  ```
-  rm -rf <Xilinx>/Downloads/<Version>/payload
-  ```
   ## Install the extra needed libraries
   ```
   sudo ./<Xilinx>/Vitis/<Version>/scripts/installLibs.sh
