@@ -38,9 +38,9 @@
       - Navigate to **Help -> Add design tools or devices**
       - Install the desired device(s)
       - Delete the payload (~60 GB) (If it is not deleted by it self)
-      ```
-      sudo rm -rf /opt/xilinx/Installation_2023.2/Downloads/2023.2/payload
-      ```
+        ```
+        sudo rm -rf /opt/xilinx/Installation_2023.2/Downloads/2023.2/payload
+        ```
   <br></br>
 
 
