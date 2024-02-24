@@ -25,12 +25,22 @@
   ```
   - Run the installer
   ```
-  ./<Vitis installer>
+  sudo ./<Vitis installer>
   ```
+  - Install it under /opt/xilinx/ directory
+    - If there is not enough space for both Vitis and the desired device(s)
+      - Install vitis with just *artix-7*
+      - Launch Vivado
+        ```
+        cd /opt/xilinx/Installation_2023.2/Vivado/2023.2/bin
+        sudo ./vivado
+        ```
+      - Navigate to **Help -> Add design tools or devices**
+      - Install the desired device(s)
   <br></br>
 
 # After the installation
-  ## Delete the payload (~60 GB) (Experimental)
+  ## Delete the payload (~60 GB) (If it is not deleted by it self)
   ```
   rm -rf <Xilinx>/Downloads/<Version>/payload
   ```
