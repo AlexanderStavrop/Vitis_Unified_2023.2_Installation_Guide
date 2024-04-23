@@ -189,3 +189,6 @@
   ```
   sudo apt install gcc-multilib
   ```
+
+
+  # DONT FORGET THE FUCKING AI ENGINE PACKAGE DO NOT START THE GRAPH :(
