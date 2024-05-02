@@ -1,11 +1,13 @@
 # Vitis Unified 2023.2 Installation guide
 This guide is intended to help you install Vitis 2023.2 and the necessary libraries to create a system project for the Versal Vck190 platform.
 
+
+
 # Table of Contents
   1. [Prerequisites](#Prerequisites)
-  2. [Installation](#{nstallation)
-  3. Post installation
-  4. XRT libray
+  2. [Installation](#Installation)
+  3. [Post installation](#Post-installation)
+  4. [Xilinx Runtime Library (XRT)](#Xilinx-Runtime-Library-(XRT))
   5. Rootfs-Kernel Image-Sysroot
 
 ## Prerequisites
@@ -20,6 +22,7 @@ Installing *Vitis* for the *Versal AI Core Series* typically requires approximat
   ```Bash
   sudo apt install Linncurses5-dev Liöncursesw-dev liüncursess Libtinfus libtinfo-dev -y
   ```
+
 
 ## Installation
 Once the necessary requirements have been met, the installation can begin.
@@ -70,51 +73,41 @@ Download the  <a href="https://www.xilinx.com/support/download/index.html/conten
     ```
 
 
+## Post installation
+After completing the installation, you'll need to proceed with installing necessary libraries and associating your license.
 
-    
-# After the installation
-  ## Install the extra needed libraries
-  ```
+### Install the extra needed libraries
+  ```Bash
   cd /opt/xilinx/Installation_2023.2/Vitis/2023.2/scripts/
+  ```
+  ```Bash
   sudo ./installLibs.sh
   ```
-  
-  ## License
-  ### Generate and download the licence
-  - <a href="https://www.xilinx.com/getlicense">Generate License</a>
-  - Move the lic file into Vitis folder
-    ```
-    sudo mv ~/Downloads/Xilinx.lic /opt/xilinx/
-    ```
-  - Open bashrc for edit
-    ```
-    vim ~/.bashrc
-    ```
-  - Set the bashrc variable
-    ```
-    # Xilinx source command
-    export XILINXD_LICENSE_FILE="/opt/xilinx/Xilinx.lic"
-    ```
-  ## Setting up the enviromental variables
-  - Open bashrc for edit
-    ```
-    vim ~/.bashrc
-    ```
-  - Add these lines
-    ```
-    # Xilinx source command
-    source /opt/xilinx/Installation_2023.2/Vitis/2023.2/settings64.sh
-    export PLATFORM_REPO_PATHS="/opt/xilinx/Installation_2023.2/Vitis/2023.2/base_platforms/"
-    ```
-  - Test by running (Close and re-open the terminal)
+### License
+- If you haven't already generated a licence, use <a href="https://www.xilinx.com/getlicense">this link</a> to generate one
+- Download the *.lic* file and move it to the opt directory
+  ```Bash
+  sudo mv ~/Downloads/Xilinx.lic /opt/xilinx/
+  ```
+- Edit the bashrc file and export the *XILINXD_LICENSE_FILE* variable
+  ```Bash
+  vim ~/.bashrc
+  ```
+  ```Bash
+  # Xilinx source command
+  export XILINXD_LICENSE_FILE="/opt/xilinx/Xilinx.lic"
+  ```
+- Test by running after closing and re-openning the terminal
     ```
     which vitis
     ```
     ```
     which aiecompiler
     ```
-  
-  ## XRT
+  - The location of *Vitis* and *aiecompiler* should be printed with each command.
+
+
+  ## Xilinx Runtime Library (XRT)
   ### Check the cmake version
   ```
   cmake --version
