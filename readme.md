@@ -7,7 +7,7 @@ This guide is intended to help you install Vitis 2023.2 and the necessary librar
   1. [Prerequisites](#Prerequisites)
   2. [Installation](#Installation)
   3. [Post installation](#Post-installation)
-  4. [Xilinx Runtime Library (XRT)](#Xilinx-Runtime-Library (XRT))
+  4. [Xilinx Runtime Library (XRT)](#Xilinx-Runtime-Library-(XRT))
   5. Rootfs-Kernel Image-Sysroot
 
 ## Prerequisites
