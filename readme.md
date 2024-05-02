@@ -2,8 +2,8 @@
 This guide is intended to help you install Vitis 2023.2 and the necessary libraries to create a system project for the Versal Vck190 platform.
 
 # Table of Contents
-  1. [Prerequisites](#{Prerequisites})
-  2. [Installation](#{Installation})
+  1. [Prerequisites](#Prerequisites)
+  2. [Installation](#{nstallation)
   3. Post installation
   4. XRT libray
   5. Rootfs-Kernel Image-Sysroot
