@@ -2,8 +2,8 @@
 This guide is intended to help you install Vitis 2023.2 and the necessary libraries to create a system project for the Versal Vck190 platform.
 
 # Table of Contents
-  1. Prerequisites
-  2. Installation
+  1. [Prerequisites](#{Prerequisites})
+  2. [Installation](#{Installation})
   3. Post installation
   4. XRT libray
   5. Rootfs-Kernel Image-Sysroot
@@ -21,7 +21,7 @@ Installing *Vitis* for the *Versal AI Core Series* typically requires approximat
   sudo apt install Linncurses5-dev Liöncursesw-dev liüncursess Libtinfus libtinfo-dev -y
   ```
 
-## Instalation
+## Installation
 Once the necessary requirements have been met, the installation can begin.
 
 ### Downloading the installer
@@ -48,33 +48,30 @@ Download the  <a href="https://www.xilinx.com/support/download/index.html/conten
     ```bash
     sudo ./<Vitis installer>
     ```
-    1. Login  
-    2. Select *Vitis* as the product to install  
-    3. Under *Devices > Device custom platforms* check **only** *Versal ACAP > Versal AI Core Series*
+    - Login  
+    - Select *Vitis* as the product to install  
+    - Under *Devices > Device custom platforms* check **only** *Versal ACAP > Versal AI Core Series*
        - If there is not enough space for both Vitis and the Versal AI Core platform check **only** *7 Series > Artix-7*
-    5. Agree to everything  
-    6. It is recommended that you install Vitis in the *opt/xilinx* directory.
+    - Agree to everything  
+    - It is recommended that you install Vitis in the *opt/xilinx* directory.
+
 - If you are installing on a 256GB ssd, after installation completes, 
-
-
+  - Launch Vivado
+      ```Bash
+      cd /opt/xilinx/Vivado/2023.2/bin
+      ```
+      ```bash
+      sudo ./vivado
+      ```
+  - Navigate to *Help -> Add design tools or devices* and select *Versal AI Core Series*
+  - Delete the payload (~60 GB) (If it is not deleted by it self)
+    ```Bash
+    sudo rm -rf /opt/xilinx/Installation_2023.2/Downloads/2023.2/payload
     ```
-  - Install it under /tools/xilinx/ directory
-    - If there is not enough space for both Vitis and the desired device(s)
-      - Install vitis with just *artix-7*
-      - Launch Vivado
-        ```
-        cd /tools/Vivado/2023.2/bin
-        sudo ./vivado
-        ```
-      - Navigate to **Help -> Add design tools or devices**
-      - Install the desired device(s)
-      - Delete the payload (~60 GB) (If it is not deleted by it self)
-        ```
-        sudo rm -rf /tools/xilinx/Installation_2023.2/Downloads/2023.2/payload
-        ```
-  <br></br>
 
 
+
+    
 # After the installation
   ## Install the extra needed libraries
   ```
