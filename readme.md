@@ -48,31 +48,15 @@ Download the  <a href="https://www.xilinx.com/support/download/index.html/conten
     ```bash
     sudo ./<Vitis installer>
     ```
-    1\. Login
-    2\. Select *Vitis* as the product to install
-    3\. Under *Devices > Device custom platforms* check **only** *Versal ACAP > Versal AI Core Series* 
-        - If there is not enough space for both Vitis and the Versal AI Core platform check **only** *7 Series > Artix-7*
-    4\. Agree to everything
-    5\. It is recommended that you install Vitis in the *opt/xilinx* directory.
+    1. Login  
+    2. Select *Vitis* as the product to install  
+    3. Under *Devices > Device custom platforms* check **only** *Versal ACAP > Versal AI Core Series*
+       - If there is not enough space for both Vitis and the Versal AI Core platform check **only** *7 Series > Artix-7*
+    5. Agree to everything  
+    6. It is recommended that you install Vitis in the *opt/xilinx* directory.
+- If you are installing on a 256GB ssd, after installation completes, 
 
 
-
-
-# Instalation
-  ## Downloading the installer
-  - <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Installer</a>
-  <br></br>
-  
-  ## Run the installer
-  ### Make the installer executable and run it
-  - Make the file executable
-    ```
-    cd ~/Downloads
-    chmod +x <Vitis installer>
-    ```
-  - Run the installer
-    ```
-    sudo ./<Vitis installer>
     ```
   - Install it under /tools/xilinx/ directory
     - If there is not enough space for both Vitis and the desired device(s)
