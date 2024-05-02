@@ -1,13 +1,60 @@
-# Before installation
-  ## Update your system
+# Vitis Unified 2023.2 Installation guide
+This guide is intended to help you install Vitis 2023.2 and the necessary libraries to create a system project for the Versal Vck190 platform.
+
+# Table of Contents
+  1. Prerequisites
+  2. Installation
+  3. Post installation
+  4. XRT libray
+  5. Rootfs-Kernel Image-Sysroot
+
+## Prerequisites
+Installing *Vitis* for the *Versal AI Core Series* typically requires approximately **260GB** of space on the host machine, with post-installation space reduced to approximately **160GB**. However, we can tailor the Installation process to fit within the confines of a 256GB SSD. This guide will walk you through the process using *Ubuntu 22.04 LTS* as the Linux operating system required for XRT library compatibility.
+
+### Update the host system and install the required libraries
+- Update and upgrade the host system
+  ```Bash
+  sudo apt update -y a sudo apt upgrade -y
   ```
-  sudo apt update -y && sudo apt upgrade -y
+- Install the required libraries (otherwise the installation will nat complete successfully)
+  ```Bash
+  sudo apt install Linncurses5-dev Liöncursesw-dev liüncursess Libtinfus libtinfo-dev -y
   ```
-  - Install needed libraries so the installation completes successfully
+
+## Instalation
+Once the necessary requirements have been met, the installation can begin.
+
+### Downloading the installer
+Download the  <a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Linux Self Extracting Web Installer</a> (This installation guide is for version 2023.2. Newer versions may differ)
+
+### Run the installer
+- Make the installer executable
+  ```Bash
+  cd ~/Download
+  ```
+  ```Bash
+  chmod +x <Vitis installer>
+  ```
+
+### Run the installer
+- Make the installer executable
+    ```bash
+    cd ~/Downloads
     ```
-    sudo apt install libncurses5-dev libncursesw5-dev libncurses5 libtinfo5 libtinfo-dev -y
+    ```bash
+    chmod +x <Vitis installer>
     ```
-  <br></br>
+- Run the installer
+    ```bash
+    sudo ./<Vitis installer>
+    ```
+    1\. Login
+    2\. Select *Vitis* as the product to install
+    3\. Under *Devices > Device custom platforms* check **only** *Versal ACAP > Versal AI Core Series* 
+        - If there is not enough space for both Vitis and the Versal AI Core platform check **only** *7 Series > Artix-7*
+    4\. Agree to everything
+    5\. It is recommended that you install Vitis in the *opt/xilinx* directory.
+
 
 
 
