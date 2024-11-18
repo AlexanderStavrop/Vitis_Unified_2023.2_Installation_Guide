@@ -19,9 +19,6 @@ Installing *Vitis* for the *Versal AI Core Series* typically requires approximat
   sudo apt update -y a sudo apt upgrade -y
   ```
 - Install the required libraries (otherwise the installation will nat complete successfully)
-  ```Bash
-  sudo apt install Linncurses5-dev Liöncursesw-dev liüncursess Libtinfus libtinfo-dev -y
-  ```
 
 
 ## Installation
